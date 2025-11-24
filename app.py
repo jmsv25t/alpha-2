@@ -1,6 +1,6 @@
 from flask import Flask
 # Importa os Blueprints
-from .auth import auth as auth_bp
+from auth import auth as auth_bp
 from .main import main as main_bp
 
 # 1. Inicializa o aplicativo Flask
@@ -19,3 +19,4 @@ app.register_blueprint(main_bp)
 if __name__ == '__main__':
     # Roda o servidor.
     app.run(debug=True)
+
