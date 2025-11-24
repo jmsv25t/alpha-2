@@ -1,0 +1,149 @@
+/* static/css/style.css */
+
+/* Definições de Cores */
+:root {
+    --primary-color: #000000;      /* Preto */
+    --secondary-color: #FFFFFF;    /* Branco */
+    --accent-color: #FFD700;       /* Dourado */
+    --text-light: #555555;         /* Cinza (para pequenos detalhes) */
+}
+
+/* Estilo Básico */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+/* Estilo do Cabeçalho e Títulos */
+.header-title {
+    font-family: 'Georgia', serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+/* Estilo para Fundo Escuro com Dourado */
+.dark-section {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px 0;
+}
+
+.dark-section .header-title {
+    color: var(--accent-color);
+}
+
+.accent-text {
+    color: var(--accent-color);
+}
+
+/* Estilo dos Botões e Formulários */
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--text-light);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.main-button {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.main-button:hover {
+    background-color: #333333;
+}
+
+/* Botões Sociais (Pequenos) */
+.social-buttons button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    width: 30%; /* Para que fiquem pequenos */
+}
+
+/* Layout do Dashboard */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid var(--text-light);
+    border-top: 5px solid var(--accent-color); /* Detalhe Dourado */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+/* style.css (Adicionar ao final) */
+
+/* Navigation Bar (Preto com Dourado) */
+.navbar {
+    background-color: var(--primary-color); /* Preto */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    color: var(--accent-color); /* Dourado */
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar a {
+    color: var(--secondary-color); /* Branco */
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--accent-color); /* Dourado no hover */
+}
+
+/* Botão de Chamada para Ação na Navbar */
+.navbar .cta-button {
+    background-color: var(--accent-color);
+    color: var(--primary-color) !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
