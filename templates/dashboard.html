@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salões - Beauty Wave</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('dashboard') }}" class="logo">Beauty Wave</a>
+        <div>
+            <a href="{{ url_for('dashboard') }}">Salões</a>
+            <a href="{{ url_for('servicos') }}">Serviços</a>
+            <a href="{{ url_for('agendar') }}" class="cta-button">Agendar</a>
+            <a href="{{ url_for('perfil') }}">Meu Perfil</a>
+            <a href="{{ url_for('index') }}">Sair</a>
+        </div>
+    </div>
+
+    <div style="padding: 20px;">
+        <h2>Salões Disponíveis</h2>
+        <p>Este é o espaço para **especificações** e detalhes dos salões cadastrados.</p>
+    </div>
+
+    <div class="grid-container">
+        <div class="card" onclick="window.location.href='{{ url_for('funcionarios') }}';">
+            <h3>Salão Brilho Dourado ✨</h3>
+            <p style="color: var(--text-light);">Local: Centro, São Paulo</p>
+            <p>Especialidade: Cabelos e Penteados.</p>
+            <p class="accent-text">Ver Funcionários</p>
+        </div>
+
+        <div class="card" onclick="window.location.href='{{ url_for('funcionarios') }}';">
+            <h3>Nail Art Profissional 💅</h3>
+            <p style="color: var(--text-light);">Local: Jardins, São Paulo</p>
+            <p>Especialidade: Manicure e Pedicure.</p>
+            <p class="accent-text">Ver Funcionários</p>
+        </div>
+
+        <div class="card" onclick="window.location.href='{{ url_for('funcionarios') }}';">
+            <h3>Barbearia Clássica 🧔</h3>
+            <p style="color: var(--text-light);">Local: Vila Mariana, São Paulo</p>
+            <p>Especialidade: Barba e Corte Masculino.</p>
+            <p class="accent-text">Ver Funcionários</p>
+        </div>
+    </div>
+</body>
+</html>

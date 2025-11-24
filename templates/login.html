@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Beauty Wave</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="dark-section" style="text-align: center; padding: 10px;">
+        <h1 class="header-title">Login</h1>
+    </div>
+
+    <div class="form-container">
+
+        <div class="social-buttons" style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+            <button onclick="alert('Login com Google (Em breve)')">Google</button>
+            <button onclick="alert('Login com Facebook (Em breve)')">Facebook</button>
+            <button onclick="alert('Login com Telefone (Em breve)')">Telefone</button>
+        </div>
+
+        <div style="text-align: center; margin: 15px 0; color: var(--text-light);">
+            ou
+        </div>
+
+        <!-- FORMULÁRIO PRINCIPAL DE LOGIN -->
+        <form action="{{ url_for('login') }}" method="POST">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <button type="submit" class="main-button">Entrar</button>
+        </form>
+
+        <!-- LINK DE RECUPERAÇÃO DE SENHA -->
+        <p style="text-align: center; margin-top: 15px;">
+            <a href="{{ url_for('recuperar_senha') }}" style="color: var(--text-light);">Esqueceu sua senha?</a>
+        </p>
+
+        <!-- LINK PARA CRIAÇÃO DE CONTA -->
+        <p style="text-align: center; margin-top: 15px;">
+            Não tem conta? <a href="{{ url_for('cadastro') }}">Crie uma agora</a>
+        </p>
+
+    </div>
+</body>
+</html>

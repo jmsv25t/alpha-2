@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso - Link Enviado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="dark-section" style="text-align: center; padding: 10px;">
+        <h1 class="header-title">Solicitação Recebida</h1>
+    </div>
+
+    <div class="form-container" style="text-align: center;">
+        <h3 class="accent-text">Verifique seu E-mail!</h3>
+        <p>
+            Um e-mail com instruções para redefinir sua senha foi enviado. Por favor, cheque sua caixa de entrada e, se não encontrar, verifique a pasta de spam.
+        </p>
+        <p style="margin-top: 20px;">
+            <a href="{{ url_for('login') }}"><button class="main-button" style="width: 250px;">Voltar para o Login</button></a>
+        </p>
+    </div>
+</body>
+</html>

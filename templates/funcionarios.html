@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionários e Agenda</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="dark-section" style="text-align: center; padding: 10px;">
+        <h1 class="header-title">Salão Brilho Dourado</h1>
+        <a href="{{ url_for('dashboard') }}" style="color: var(--accent-color); text-decoration: none;">&lt; Voltar para Salões</a>
+    </div>
+
+    <div style="padding: 20px;">
+        <h2>Nossos Profissionais</h2>
+        <p>Este é o espaço para **informações** detalhadas sobre os serviços e a agenda dos funcionários.</p>
+    </div>
+
+    <div class="grid-container">
+        <div class="card">
+            <h3>Funcionário X - Cabeleireiro Sênior</h3>
+            <p style="color: var(--text-light);">Serviços: Cortes, Coloração, Tratamentos Capilares.</p>
+            <p class="accent-text" style="font-weight: bold;">Agenda:</p>
+            <p>Segunda a Sexta (Horário comercial).</p>
+        </div>
+
+        <div class="card">
+            <h3>Funcionário Y - Manicure e Pedicure</h3>
+            <p style="color: var(--text-light);">Serviços: Unhas em Gel, Blindagem, Estética dos Pés.</p>
+            <p class="accent-text" style="font-weight: bold;">Agenda:</p>
+            <p>Terça a Sábado (Horário integral).</p>
+        </div>
+
+        <div class="card">
+            <h3>Funcionário Z - Maquiador Artístico</h3>
+            <p style="color: var(--text-light);">Serviços: Maquiagem Social e Artística.</p>
+            <p class="accent-text" style="font-weight: bold;">Agenda:</p>
+            <p>Segunda a Sábado (Meio período, à noite).</p>
+        </div>
+    </div>
+</body>
+</html>

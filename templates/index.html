@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Wave | O seu destino de Beleza</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="dark-section" style="text-align: center; padding: 50px 20px;">
+        <h1 class="header-title">Beauty Wave</h1>
+        
+        <p style="font-size: 1.2em;">
+            "Sua beleza, nossa onda. <span class="accent-text">Transforme-se!</span>"
+        </p>
+        <br>
+        
+        <p>Já tem cadastro? Faça seu login.</p>
+        <a href="{{ url_for('login') }}"><button class="main-button" style="width: 250px;">Fazer Login</button></a>
+        <p style="margin-top: 15px;">Novo por aqui? Cadastre-se.</p>
+        <a href="{{ url_for('cadastro') }}"><button class="main-button" style="width: 250px; background-color: var(--accent-color); color: var(--primary-color);">Criar Conta</button></a>
+    </div>
+
+    <div style="text-align: center; padding: 20px;">
+        <h2>Sobre o Beauty Wave</h2>
+        <p>
+            O Beauty Wave conecta você aos melhores salões e profissionais de beleza, 
+            permitindo agendamentos fáceis e descobertas de novos estilos. 
+            É a plataforma onde a qualidade encontra a conveniência.
+        </p>
+    </div>
+</body>
+</html>

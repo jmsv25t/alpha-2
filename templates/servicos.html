@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - Beauty Wave</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('dashboard') }}" class="logo">Beauty Wave</a>
+        <div>
+            <a href="{{ url_for('dashboard') }}">Salões</a>
+            <a href="{{ url_for('servicos') }}">Serviços</a>
+            <a href="{{ url_for('agendar') }}" class="cta-button">Agendar</a>
+            <a href="{{ url_for('perfil') }}">Meu Perfil</a>
+            <a href="{{ url_for('index') }}">Sair</a>
+        </div>
+    </div>
+
+    <div style="padding: 20px;">
+        <h2>Lista de Serviços e Preços</h2>
+        <p>Confira nossa gama de serviços de beleza. Clique para agendar!</p>
+        
+        <div class="grid-container">
+            <div class="card" onclick="window.location.href='{{ url_for('agendar') }}';">
+                <h3>Corte Feminino</h3>
+                <p>Detalhe: Corte moderno e lavagem inclusa.</p>
+                <p class="accent-text">R$ 80,00</p>
+            </div>
+            
+            <div class="card" onclick="window.location.href='{{ url_for('agendar') }}';">
+                <h3>Coloração Completa</h3>
+                <p>Detalhe: Coloração e hidratação.</p>
+                <p class="accent-text">R$ 180,00</p>
+            </div>
+
+            <div class="card" onclick="window.location.href='{{ url_for('agendar') }}';">
+                <h3>Manicure Simples</h3>
+                <p>Detalhe: Esmaltação e remoção de cutículas.</p>
+                <p class="accent-text">R$ 35,00</p>
+            </div>
+
+            <div class="card" onclick="window.location.href='{{ url_for('agendar') }}';">
+                <h3>Design de Sobrancelhas</h3>
+                <p>Detalhe: Desenho com henna.</p>
+                <p class="accent-text">R$ 55,00</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

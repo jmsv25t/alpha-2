@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - Beauty Wave</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('dashboard') }}" class="logo">Beauty Wave</a>
+        <div>
+            <a href="{{ url_for('dashboard') }}">Salões</a>
+            <a href="{{ url_for('servicos') }}">Serviços</a>
+            <a href="{{ url_for('agendar') }}" class="cta-button">Agendar</a>
+            <a href="{{ url_for('perfil') }}">Meu Perfil</a>
+            <a href="{{ url_for('index') }}">Sair</a>
+        </div>
+    </div>
+
+    <div style="padding: 20px; max-width: 800px; margin: 0 auto;">
+        <h2>Bem-vindo(a), [Nome do Usuário]</h2>
+        <h3 class="accent-text">Meus Dados Pessoais</h3>
+        <div style="border: 1px solid var(--text-light); padding: 15px; margin-bottom: 20px;">
+            <p><strong>Email:</strong> usuario@exemplo.com</p>
+            <p><strong>Telefone:</strong> (11) 99999-0000</p>
+            <p><strong>Localização:</strong> São Paulo - SP</p>
+            <button class="main-button" style="width: 200px; background-color: var(--secondary-color); color: var(--primary-color);">Editar Informações</button>
+        </div>
+
+        <h3 class="accent-text">Próximos Agendamentos</h3>
+        <div class="grid-container" style="padding: 0; margin: 0;">
+             <div class="card" style="border-color: var(--primary-color);">
+                <h4>Corte Feminino com Funcionário X</h4>
+                <p><strong>Salão:</strong> Brilho Dourado</p>
+                <p><strong>Data/Hora:</strong> 25/11/2025 às 14:30</p>
+                <button class="main-button" style="width: 100%; background-color: #f44336; color: white;">Cancelar</button>
+            </div>
+        </div>
+
+        <h3 class="accent-text" style="margin-top: 20px;">Histórico de Agendamentos</h3>
+        <p style="color: var(--text-light);">Nenhum agendamento concluído recentemente.</p>
+    </div>
+</body>
+</html>

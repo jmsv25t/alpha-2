@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar - Beauty Wave</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('dashboard') }}" class="logo">Beauty Wave</a>
+        <div>
+            <a href="{{ url_for('dashboard') }}">Salões</a>
+            <a href="{{ url_for('servicos') }}">Serviços</a>
+            <a href="{{ url_for('agendar') }}" class="cta-button">Agendar</a>
+            <a href="{{ url_for('perfil') }}">Meu Perfil</a>
+            <a href="{{ url_for('index') }}">Sair</a>
+        </div>
+    </div>
+
+    <div class="form-container" style="max-width: 500px;">
+        <h2>Agendamento Rápido</h2>
+        <form action="{{ url_for('perfil') }}" method="GET">
+            <label for="salao">Selecione o Salão:</label>
+            <select id="salao" name="salao" required>
+                <option value="">-- Escolha um Salão --</option>
+                <option value="brilho">Salão Brilho Dourado</option>
+                <option value="nail">Nail Art Profissional</option>
+            </select>
+
+            <label for="servico">Selecione o Serviço:</label>
+            <select id="servico" name="servico" required>
+                <option value="">-- Escolha um Serviço --</option>
+                <option value="corte">Corte Feminino</option>
+                <option value="coloracao">Coloração</option>
+                <option value="manicure">Manicure Simples</option>
+            </select>
+
+            <label for="profissional">Selecione o Profissional:</label>
+            <select id="profissional" name="profissional" required>
+                <option value="">-- Escolha um Profissional --</option>
+                <option value="x">Funcionário X</option>
+                <option value="y">Funcionário Y</option>
+                <option value="z">Funcionário Z</option>
+            </select>
+            
+            <label for="data">Data Desejada:</label>
+            <input type="date" id="data" name="data" required>
+            
+            <label for="horario">Horário Desejado:</label>
+            <input type="time" id="horario" name="horario" required>
+
+            <button type="submit" class="main-button">Confirmar Agendamento</button>
+        </form>
+    </div>
+</body>
+</html>
