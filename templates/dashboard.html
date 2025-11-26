@@ -27,8 +27,7 @@
         
         <div class="card" onclick="window.location.href='{{ url_for('funcionarios') }}';">
             
-            <img src="{{ url_for('static', filename='images/sl1.jpg') }}" alt="Salão Brilho Dourado" 
-                 style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin-bottom: 15px;">
+            <img class="card-image" src="{{ url_for('static', filename='images/sl1.jpg') }}" alt="Salão Brilho Dourado">
             
             <h3>Salão Brilho Dourado ✨</h3>
             <p style="color: var(--text-light);">Local: Centro, São Paulo</p>
@@ -38,10 +37,9 @@
 
         <div class="card" onclick="window.location.href='{{ url_for('funcionarios') }}';">
             
-            <img src="{{ url_for('static', filename='images/sl2.jpg') }}" alt="Nail Art Profissional" 
-                 style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin-bottom: 15px;">
+            <img class="card-image" src="{{ url_for('static', filename='images/sl2.jpg') }}" alt="Nail Art Profissional">
             
-            <h3>Nail Beauty Salon 💅</h3>
+            <h3>Nail Art Profissional 💅</h3>
             <p style="color: var(--text-light);">Local: Jardins, São Paulo</p>
             <p>Especialidade: Manicure e Pedicure.</p>
             <p class="accent-text">Ver Funcionários</p>
@@ -49,8 +47,7 @@
 
         <div class="card" onclick="window.location.href='{{ url_for('funcionarios') }}';">
             
-            <img src="{{ url_for('static', filename='images/sl3.jpg') }}" alt="Barbearia Clássica" 
-                 style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px 8px 0 0; margin-bottom: 15px;">
+            <img class="card-image" src="{{ url_for('static', filename='images/sl3.jpg') }}" alt="Barbearia Clássica">
 
             <h3>Barbearia Clássica 🧔</h3>
             <p style="color: var(--text-light);">Local: Vila Mariana, São Paulo</p>
@@ -60,5 +57,3 @@
     </div>
 </body>
 </html>
-
-
